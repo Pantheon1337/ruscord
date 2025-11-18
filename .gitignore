@@ -38,3 +38,7 @@ Thumbs.db
 uploads/
 temp/
 
+# Logs
+logs/
+*.log
+
