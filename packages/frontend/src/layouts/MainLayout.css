@@ -1,0 +1,10 @@
+.main-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #36393f;
+  color: #dcddde;
+  overflow: hidden;
+}
+
+

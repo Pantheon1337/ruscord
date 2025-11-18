@@ -1,0 +1,147 @@
+.incoming-call-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.incoming-call-modal {
+  background: #2f3136;
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  min-width: 320px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.incoming-call-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #5865f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #5865f2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(88, 101, 242, 0);
+  }
+}
+
+.incoming-call-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.incoming-call-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.incoming-call-info {
+  text-align: center;
+}
+
+.incoming-call-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.incoming-call-type {
+  font-size: 16px;
+  color: #b9bbbe;
+}
+
+.incoming-call-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.incoming-call-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #fff;
+}
+
+.incoming-call-btn:hover {
+  transform: scale(1.1);
+}
+
+.incoming-call-btn:active {
+  transform: scale(0.95);
+}
+
+.incoming-call-btn.reject {
+  background: #ed4245;
+}
+
+.incoming-call-btn.reject:hover {
+  background: #c03537;
+  box-shadow: 0 4px 12px rgba(237, 66, 69, 0.4);
+}
+
+.incoming-call-btn.accept {
+  background: #23a55a;
+}
+
+.incoming-call-btn.accept:hover {
+  background: #1d8f4a;
+  box-shadow: 0 4px 12px rgba(35, 165, 90, 0.4);
+}
+

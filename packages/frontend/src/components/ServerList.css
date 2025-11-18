@@ -1,0 +1,152 @@
+.server-list {
+  width: 72px;
+  background: #202225;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  gap: 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-shrink: 0;
+  height: 100vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.server-list::-webkit-scrollbar {
+  display: none;
+}
+
+.server-item {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #36393f;
+  border: none;
+  color: #dcddde;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-radius 0.15s ease-out, background 0.15s ease-out;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.server-item:hover {
+  border-radius: 16px;
+  background: #5865f2;
+}
+
+.server-item.active {
+  border-radius: 16px;
+  background: #5865f2;
+}
+
+.server-item.active::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 40px;
+  background: #fff;
+  border-radius: 0 2px 2px 0;
+  transition: height 0.15s ease-out;
+}
+
+.server-item:hover::before {
+  height: 20px;
+}
+
+.server-item.active:hover::before {
+  height: 40px;
+}
+
+.server-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: border-radius 0.15s ease-out;
+}
+
+.server-item:hover img {
+  border-radius: 16px;
+}
+
+.server-item svg {
+  width: 24px;
+  height: 24px;
+}
+
+.home-btn {
+  background: #36393f;
+  color: #dcddde;
+}
+
+.home-btn:hover {
+  background: #5865f2;
+  color: #fff;
+  border-radius: 16px;
+}
+
+.home-btn.active {
+  background: #5865f2;
+  border-radius: 16px;
+}
+
+.add-server-btn {
+  background: #36393f;
+  color: #3ba55d;
+}
+
+.add-server-btn:hover {
+  background: #3ba55d;
+  color: #fff;
+  border-radius: 16px;
+}
+
+.server-divider {
+  width: 32px;
+  height: 2px;
+  background: #36393f;
+  border-radius: 1px;
+  margin: 4px 0;
+  flex-shrink: 0;
+}
+
+.servers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  align-items: center;
+}
+
+.server-item .notification-badge {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  border: 2px solid #202225;
+}
+
+.server-item .unread-indicator {
+  position: absolute;
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 8px;
+  background: #fff;
+  border-radius: 0 2px 2px 0;
+}
+
